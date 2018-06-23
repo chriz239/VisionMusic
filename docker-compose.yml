@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  visionwebservice:
+    image: ${DOCKER_REGISTRY}visionwebservice
+    build:
+      context: .
+      dockerfile: VisionWebService/Dockerfile
