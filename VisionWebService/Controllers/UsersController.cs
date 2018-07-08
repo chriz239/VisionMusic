@@ -49,7 +49,6 @@ namespace VisionWebService.Controllers
             };
         }
 
-        /*
         // GET: api/Users/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser([FromRoute] int id)
@@ -68,7 +67,6 @@ namespace VisionWebService.Controllers
 
             return Ok(user);
         }
-        */
 
         // PUT: api/Users/5
         [HttpPut("{id}")]

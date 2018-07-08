@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,10 +16,13 @@ namespace VisionTests.WebService.Database
         {
             using (var db = new ServerContext())
             {
+                db.Database.Migrate();
+                db.SaveChanges();
+
                 var userToAdd = new User
                 {
-                    Name = "Schatzipuh",
-                    LoginName = "Pupsi",
+                    Name = "Schatzipuhh",
+                    LoginName = "Pupsii",
                     Password = "secret"
                 };
                 db.Users.Add(userToAdd);

@@ -11,6 +11,12 @@ namespace VisionWebService.Database
     {
         public DbSet<User> Users { get; private set; }
 
+        public DbSet<Artist> Artists { get; private set; }
+
+        public DbSet<Track> Tracks { get; private set; }
+
+        public DbSet<Album> Albums { get; private set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
