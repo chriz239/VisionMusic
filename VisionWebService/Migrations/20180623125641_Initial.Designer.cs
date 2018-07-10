@@ -9,7 +9,7 @@ using VisionWebService.Database;
 
 namespace VisionWebService.Migrations
 {
-    [DbContext(typeof(ServerContext))]
+    [DbContext(typeof(VisionServerContext))]
     [Migration("20180623125641_Initial")]
     partial class Initial
     {

@@ -26,7 +26,7 @@ namespace VisionWebService
         {
             services.AddMvc();
 
-            services.AddDbContext<ServerContext>();
+            services.AddDbContext<VisionServerContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

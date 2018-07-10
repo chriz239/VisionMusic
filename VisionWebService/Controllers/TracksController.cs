@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -14,9 +15,9 @@ namespace VisionWebService.Controllers
     [Route("api/Tracks")]
     public class TracksController : Controller
     {
-        private readonly ServerContext _context;
+        private readonly VisionServerContext _context;
 
-        public TracksController(ServerContext context)
+        public TracksController(VisionServerContext context)
         {
             _context = context;
         }
@@ -121,6 +122,26 @@ namespace VisionWebService.Controllers
         private bool TrackExists(int id)
         {
             return _context.Tracks.Any(e => e.TrackID == id);
+        }
+
+        [Route("Download")]
+        [HttpGet("{id}")]
+        public async Task<ActionResult> Download([FromRoute] int id)
+        {
+            var track = _context.Tracks.SingleOrDefault(t => t.TrackID == id);
+
+            if (track == null)
+            {
+                return NotFound();
+            }
+
+            var memory = new MemoryStream();
+            using (var stream = new FileStream(track.AbsolutePath, FileMode.Open))
+            {
+                await stream.CopyToAsync(memory);
+            }
+            memory.Position = 0;
+            return File(memory, "application/octet-stream", Path.GetFileName(track.AbsolutePath));
         }
     }
 }

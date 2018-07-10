@@ -17,5 +17,14 @@ namespace VisionLib.Models
         public virtual Album Album { get; set; }
 
         public virtual Artist Artist { get; set; }
+
+        public virtual Repository Repository { get; set; }
+
+        public string RelativePath { get; set; }
+
+        public string AbsolutePath
+        {
+            get { return Repository?.Path + RelativePath; }
+        }
     }
 }

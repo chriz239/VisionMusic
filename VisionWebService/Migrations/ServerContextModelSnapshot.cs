@@ -7,7 +7,7 @@ using VisionWebService.Database;
 
 namespace VisionWebService.Migrations
 {
-    [DbContext(typeof(ServerContext))]
+    [DbContext(typeof(VisionServerContext))]
     partial class ServerContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

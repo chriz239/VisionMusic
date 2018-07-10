@@ -14,9 +14,9 @@ namespace VisionWebService.Controllers
     [Route("api/Users")]
     public class UsersController : Controller
     {
-        private readonly ServerContext _context;
+        private readonly VisionServerContext _context;
 
-        public UsersController(ServerContext context)
+        public UsersController(VisionServerContext context)
         {
             _context = context;
         }

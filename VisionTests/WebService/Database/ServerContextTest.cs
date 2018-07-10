@@ -14,7 +14,7 @@ namespace VisionTests.WebService.Database
         [Fact]
         public void CreateUser()
         {
-            using (var db = new ServerContext())
+            using (var db = new VisionServerContext())
             {
                 db.Database.Migrate();
                 db.SaveChanges();

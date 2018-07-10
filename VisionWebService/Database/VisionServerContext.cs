@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VisionLib.Database;
 using VisionLib.Models;
 
 namespace VisionWebService.Database
 {
-    public class ServerContext : DbContext
+    public class VisionServerContext : VisionDbContext
     {
         public DbSet<User> Users { get; private set; }
 
