@@ -9,7 +9,7 @@ namespace VisionTests.WebService.BackgroundWorker
     public class RepoScannerTests
     {
         [Fact]
-        public void ScanRepos()
+        public void ScanReposTest()
         {
             RepoScanner repoScanner = new RepoScanner();
             repoScanner.DoWork(null);
