@@ -6,3 +6,10 @@ services:
     build:
       context: .
       dockerfile: VisionWebService/Dockerfile
+
+  visionwebservice2.1:
+    image: ${DOCKER_REGISTRY}visionwebservice21
+    build:
+      context: .
+      dockerfile: VisionWebService2.1/Dockerfile
+

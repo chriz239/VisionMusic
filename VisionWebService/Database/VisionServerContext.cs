@@ -18,6 +18,8 @@ namespace VisionWebService.Database
 
         public DbSet<Album> Albums { get; private set; }
 
+        public DbSet<Repository> Repositories { get; private set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

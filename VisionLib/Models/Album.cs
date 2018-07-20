@@ -17,5 +17,9 @@ namespace VisionLib.Models
         public virtual IList<Track> Tracks { get; set; }
 
         public virtual Artist Artist { get; set; }
+
+        public Album() { }
+
+        public Album(string label) { Label = label; }
     }
 }
