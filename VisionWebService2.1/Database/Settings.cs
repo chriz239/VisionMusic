@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using VisionLib.Models;
+using VisionMusicLibrary.Models;
 using VisionWebService.Database;
 
-namespace VisionLib
+namespace VisionMusicLibrary
 {
     public static class Settings
     {

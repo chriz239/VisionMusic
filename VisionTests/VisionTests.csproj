@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VisionLib\VisionLib.csproj" />
     <ProjectReference Include="..\VisionWebService2.1\VisionWebService2.1.csproj" />
   </ItemGroup>
 

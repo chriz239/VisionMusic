@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using VisionLib.Models;
+using VisionMusicLibrary.Models;
 using VisionWebService.Database;
 
 namespace VisionWebService.Controllers
